@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign in • Organization</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-light">
+  <main class="container center-page">
+    <div class="card auth-card">
+      <div class="auth-left">
+        <h1 class="brand">Organization</h1>
+        <p class="muted">Public sector • Innovation • Employee welfare</p>
+
+        <form id="loginForm" method="post" action="{{ url_for('verify') }}">
+          <label for="email" class="label">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@organization.com" required>
+
+          <label for="code" class="label">Verification Code</label>
+          <input id="code" name="code" type="text" placeholder="Enter 2FA code" required>
+
+          <button type="submit" class="btn primary full">Sign in</button>
+        </form>
+
+        <p class="muted small">Use <strong>1234</strong> for demo 2FA.</p>
+      </div>
+
+      <div class="auth-right">
+        <h3>Welcome back 👋</h3>
+        <p>Access HR, IT and Payroll services through the secure portal.</p>
+        <ul class="features">
+          <li>Secure login</li>
+          <li>Employee assistance</li>
+          <li>Offline AI assistant</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer muted">© {{ 2025 }} Organization • All rights reserved</footer>
+  </main>
+</body>
+</html>
